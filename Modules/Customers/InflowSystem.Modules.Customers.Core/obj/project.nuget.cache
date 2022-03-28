@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vobRMgzyGfkHAt4H7tXg7xeiY++r+EnJGQd+3u3+diVaoNiGPDw4aiBsqN7g6mogxxt0N42eTasx0KS8yCBj1A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Customers\\InflowSystem.Modules.Customers.Core\\InflowSystem.Modules.Customers.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

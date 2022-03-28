@@ -1,0 +1,158 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "InflowSystem.Shared.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/InflowSystem.Shared.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InflowSystem.Shared.Abstractions.dll": {}
+        }
+      },
+      "InflowSystem.Shared.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/InflowSystem.Shared.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InflowSystem.Shared.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "sha512": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "InflowSystem.Shared.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../../../Shared/InflowSystem.Shared.Abstractions/InflowSystem.Shared.Abstractions.csproj",
+      "msbuildProject": "../../../Shared/InflowSystem.Shared.Abstractions/InflowSystem.Shared.Abstractions.csproj"
+    },
+    "InflowSystem.Shared.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../../Shared/InflowSystem.Shared.Infrastructure/InflowSystem.Shared.Infrastructure.csproj",
+      "msbuildProject": "../../../Shared/InflowSystem.Shared.Infrastructure/InflowSystem.Shared.Infrastructure.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "InflowSystem.Shared.Abstractions >= 1.0.0",
+      "InflowSystem.Shared.Infrastructure >= 1.0.0",
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 6.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Somad\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Customers\\InflowSystem.Modules.Customers.Core\\InflowSystem.Modules.Customers.Core.csproj",
+      "projectName": "InflowSystem.Modules.Customers.Core",
+      "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Customers\\InflowSystem.Modules.Customers.Core\\InflowSystem.Modules.Customers.Core.csproj",
+      "packagesPath": "C:\\Users\\Somad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Customers\\InflowSystem.Modules.Customers.Core\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Somad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Abstractions\\InflowSystem.Shared.Abstractions.csproj": {
+              "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Abstractions\\InflowSystem.Shared.Abstractions.csproj"
+            },
+            "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Infrastructure\\InflowSystem.Shared.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Infrastructure\\InflowSystem.Shared.Infrastructure.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
