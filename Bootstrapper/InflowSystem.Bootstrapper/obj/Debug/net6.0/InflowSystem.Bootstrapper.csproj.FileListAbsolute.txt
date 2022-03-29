@@ -31,3 +31,8 @@ C:\Users\Somad\source\repos\InflowSystem\Bootstrapper\InflowSystem.Bootstrapper\
 C:\Users\Somad\source\repos\InflowSystem\Bootstrapper\InflowSystem.Bootstrapper\obj\Debug\net6.0\InflowSystem.Bootstrapper.pdb
 C:\Users\Somad\source\repos\InflowSystem\Bootstrapper\InflowSystem.Bootstrapper\obj\Debug\net6.0\InflowSystem.Bootstrapper.genruntimeconfig.cache
 C:\Users\Somad\source\repos\InflowSystem\Bootstrapper\InflowSystem.Bootstrapper\obj\Debug\net6.0\ref\InflowSystem.Bootstrapper.dll
+C:\Users\Somad\source\repos\InflowSystem\Bootstrapper\InflowSystem.Bootstrapper\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Somad\source\repos\InflowSystem\Bootstrapper\InflowSystem.Bootstrapper\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Somad\source\repos\InflowSystem\Bootstrapper\InflowSystem.Bootstrapper\bin\Debug\net6.0\Scrutor.dll
+C:\Users\Somad\source\repos\InflowSystem\Bootstrapper\InflowSystem.Bootstrapper\bin\Debug\net6.0\InflowSystem.Shared.Abstractions.dll
+C:\Users\Somad\source\repos\InflowSystem\Bootstrapper\InflowSystem.Bootstrapper\bin\Debug\net6.0\InflowSystem.Shared.Abstractions.pdb

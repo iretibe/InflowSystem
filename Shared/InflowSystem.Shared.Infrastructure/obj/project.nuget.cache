@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "5VygNPmIQyVeWT4Gtm6VjMufxPoZIo5GnZF4obbv84QX2t0D36D3u7KpiQ1ntGZj01hhC3KvCeAgQ5t2fcBn7g==",
+  "dgSpecHash": "3nMzJfLRgq3hG3a6PDqQvZj+Hyfjb9+U/Am9VCj2V0VsHprNNWiphBXnBCotrhWYznSk/rrp8AAxvEO3yEEWgg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Infrastructure\\InflowSystem.Shared.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.extensions.dependencymodel\\6.0.0\\microsoft.extensions.dependencymodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\scrutor\\4.1.0\\scrutor.4.1.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

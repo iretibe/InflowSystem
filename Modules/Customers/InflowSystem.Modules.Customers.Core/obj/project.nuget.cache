@@ -1,10 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "vobRMgzyGfkHAt4H7tXg7xeiY++r+EnJGQd+3u3+diVaoNiGPDw4aiBsqN7g6mogxxt0N42eTasx0KS8yCBj1A==",
+  "dgSpecHash": "pqMPzm3oDeSjzT9U+Vf+A1mEp4ivAnYNBBhF3x1MUChjAiOIN8aMN5JUBPuotQnWfySEFA3NpqH2WUowSMXTaw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Customers\\InflowSystem.Modules.Customers.Core\\InflowSystem.Modules.Customers.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.extensions.dependencymodel\\6.0.0\\microsoft.extensions.dependencymodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\scrutor\\4.1.0\\scrutor.4.1.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

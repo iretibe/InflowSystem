@@ -54,6 +54,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
             }
           },
           "imports": [
@@ -160,7 +164,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Abstractions\\InflowSystem.Shared.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Abstractions\\InflowSystem.Shared.Abstractions.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -172,6 +180,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Scrutor": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
