@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>a6e737ff-e045-4a34-8410-2bcad614a572</ProjectGuid>
+    <ProjectGuid>39384658-7d54-47b5-a42a-b99e542c8e9d</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>inflowsystem.bootstrapper</DockerServiceName>

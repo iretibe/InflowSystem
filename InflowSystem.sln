@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{EC5939E3-6A7E-475A-B86C-90BC0778936F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{9229F636-522F-4214-8DFD-2028F7939339}"
+	ProjectSection(SolutionItems) = preProject
+		Shared\docker-compose.yml = Shared\docker-compose.yml
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InflowSystem.Shared.Abstractions", "Shared\InflowSystem.Shared.Abstractions\InflowSystem.Shared.Abstractions.csproj", "{EB0C42D3-61D6-47CC-8486-2AA2B15445FE}"
 EndProject
@@ -23,7 +26,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InflowSystem.Modules.Custom
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9ECA63C9-FF87-4246-81EB-6FE2E08A0116}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A6E737FF-E045-4A34-8410-2BCAD614A572}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{39384658-7D54-47B5-A42A-B99E542C8E9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +54,10 @@ Global
 		{6D85EC48-1098-4C6C-81F7-FD779378A591}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D85EC48-1098-4C6C-81F7-FD779378A591}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D85EC48-1098-4C6C-81F7-FD779378A591}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6E737FF-E045-4A34-8410-2BCAD614A572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6E737FF-E045-4A34-8410-2BCAD614A572}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6E737FF-E045-4A34-8410-2BCAD614A572}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6E737FF-E045-4A34-8410-2BCAD614A572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39384658-7D54-47B5-A42A-B99E542C8E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39384658-7D54-47B5-A42A-B99E542C8E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39384658-7D54-47B5-A42A-B99E542C8E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39384658-7D54-47B5-A42A-B99E542C8E9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

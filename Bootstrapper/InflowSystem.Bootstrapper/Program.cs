@@ -1,3 +1,22 @@
+namespace InflowSystem.Bootstrapper
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
+}
+
+/*
 using InflowSystem.Modules.Customers.Api;
 using InflowSystem.Shared.Infrastructure;
 using InflowSystem.Shared.Infrastructure.Commands;
@@ -31,3 +50,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+*/
