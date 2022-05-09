@@ -13,6 +13,28 @@ services:
     - mode: ingress
       target: 80
       protocol: tcp
+  postgres:
+    container_name: postgres
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    image: postgres
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 5432
+      published: "5432"
+      protocol: tcp
+    restart: unless-stopped
+    shm_size: "4294967296"
+    volumes:
+    - type: volume
+      source: postgres
+      target: /var/lib/postgresql/data
+      volume: {}
 networks:
   default:
     name: dockercompose10111193774335795178_default
+volumes:
+  postgres:
+    name: dockercompose10111193774335795178_postgres

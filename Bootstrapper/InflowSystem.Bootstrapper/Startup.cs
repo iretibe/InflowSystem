@@ -1,47 +1,35 @@
-﻿using InflowSystem.Shared.Infrastructure;
-using System.Reflection;
+﻿using InflowSystem.Modules.Customers.Api;
+using InflowSystem.Shared.Infrastructure;
 
 namespace InflowSystem.Bootstrapper
 {
     public class Startup
     {
-        private readonly IList<Assembly> _assemblies;
-        //private readonly IList<IModule> _modules;
+        private readonly IConfiguration _configuration;
 
         public Startup(IConfiguration configuration)
         {
-            //_assemblies = ModuleLoader.LoadAssemblies(configuration, "Inflow.Modules.");
-            //_modules = ModuleLoader.LoadModules(_assemblies);
+            _configuration = configuration;
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddModularInfrastructure(_assemblies, _modules);
-            //foreach (var module in _modules)
-            //{
-            //    module.Register(services);
-            //}
+            services.AddControllers();
+            services.AddCustomersModule();
+            services.AddModularInfrastructure();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
-            //logger.LogInformation($"Modules: {string.Join(", ", _modules.Select(x => x.Name))}");
-            //app.UseModularInfrastructure();
-            //foreach (var module in _modules)
-            //{
-            //    module.Use(app);
-            //}
-
-            //app.ValidateContracts(_assemblies);
+            app.UseRouting();
+            app.UseCustomersModule();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapGet("/", context => context.Response.WriteAsync("Inflow API"));
+                endpoints.MapGet("/", context => context.Response.WriteAsync("Inflow System API"));
                 //endpoints.MapModuleInfo();
             });
-
-            _assemblies.Clear();
-            //_modules.Clear();
         }
     }
 }

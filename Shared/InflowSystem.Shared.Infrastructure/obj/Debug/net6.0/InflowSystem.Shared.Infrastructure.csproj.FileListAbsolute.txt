@@ -13,3 +13,5 @@ C:\Users\Somad\source\repos\InflowSystem\Shared\InflowSystem.Shared.Infrastructu
 C:\Users\Somad\source\repos\InflowSystem\Shared\InflowSystem.Shared.Infrastructure\bin\Debug\net6.0\InflowSystem.Shared.Abstractions.dll
 C:\Users\Somad\source\repos\InflowSystem\Shared\InflowSystem.Shared.Infrastructure\bin\Debug\net6.0\InflowSystem.Shared.Abstractions.pdb
 C:\Users\Somad\source\repos\InflowSystem\Shared\InflowSystem.Shared.Infrastructure\obj\Debug\net6.0\InflowSystem.Shared.Infrastructure.csproj.CopyComplete
+C:\Users\Somad\source\repos\InflowSystem\Shared\InflowSystem.Shared.Infrastructure\bin\Debug\net6.0\InflowSystem.Shared.Infrastructure.runtimeconfig.json
+C:\Users\Somad\source\repos\InflowSystem\Shared\InflowSystem.Shared.Infrastructure\obj\Debug\net6.0\InflowSystem.Shared.Infrastructure.genruntimeconfig.cache

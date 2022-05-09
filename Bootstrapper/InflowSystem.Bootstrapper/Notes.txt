@@ -1,0 +1,3 @@
+﻿
+1- C:\Users\Somad\source\repos\InflowSystem\Modules\Customers\InflowSystem.Modules.Customers.Core>dotnet ef migrations add CustomersInitial --startup-project ../../../Bootstrapper\InflowSystem.Bootstrapper/ --context CustomersDbContext -o ./DAL/Migrations
+2- dotnet ef migrations add CustomersInitial --startup-project ../../../Bootstrapper\InflowSystem.Bootstrapper/ --context CustomersDbContext -o ./DAL/Migrations
