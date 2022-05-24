@@ -1,7 +1,7 @@
 ﻿using InflowSystem.Modules.Customers.Core.DAL;
 using InflowSystem.Modules.Customers.Core.DAL.Repositories;
 using InflowSystem.Modules.Customers.Core.Domain.Repositories;
-using InflowSystem.Shared.Infrastructure.Postgres;
+using InflowSystem.Shared.Infrastructure.SQLServer;
 using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.CompilerServices;
 
@@ -13,7 +13,8 @@ namespace InflowSystem.Modules.Customers.Core
         public static IServiceCollection AddCore(this IServiceCollection services)
         {
             services.AddScoped<ICustomerRepository, CustomerRepository>();
-            services.AddPostgres<CustomersDbContext>();
+            //services.AddPostgres<CustomersDbContext>();
+            services.AddSqlServer<CustomersDbContext>();
 
             return services;
         }

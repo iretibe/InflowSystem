@@ -1,11 +1,13 @@
 ﻿using InflowSystem.Modules.Customers.Core.Domain.ValueObjects;
 using InflowSystem.Modules.Customers.Core.Exceptions;
 using InflowSystem.Shared.Abstractions.Kernel.ValueObjects;
+using System.ComponentModel.DataAnnotations;
 
 namespace InflowSystem.Modules.Customers.Core.Domain.Entities
 {
     internal class Customer
     {
+        [Key]
         public Guid Id { get; private set; }
         public Name Name { get; private set; }
         public FullName FullName { get; private set; }

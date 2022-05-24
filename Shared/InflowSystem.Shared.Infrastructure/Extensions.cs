@@ -1,7 +1,10 @@
 ﻿using InflowSystem.Shared.Abstractions.Commands;
+using InflowSystem.Shared.Abstractions.Dispatchers;
 using InflowSystem.Shared.Abstractions.Time;
+using InflowSystem.Shared.Infrastructure.Api;
 using InflowSystem.Shared.Infrastructure.Commands;
-using InflowSystem.Shared.Infrastructure.Postgres;
+using InflowSystem.Shared.Infrastructure.Dispatchers;
+using InflowSystem.Shared.Infrastructure.Queries;
 using InflowSystem.Shared.Infrastructure.SQLServer;
 using InflowSystem.Shared.Infrastructure.Time;
 using Microsoft.Extensions.Configuration;
@@ -17,9 +20,16 @@ namespace InflowSystem.Shared.Infrastructure
         {
             services
                 .AddCommands()
-                .AddPostgres()
-                //.AddSqlServer()
+                .AddQueries()
+                .AddSingleton<IDispatcher, InMemoryDispatcher>()
+                //.AddPostgres()
+                .AddSqlServer()
                 .AddSingleton<IClock, UtcClock>();
+                //.AddControllers()
+                //.ConfigureApplicationPartManager(manager =>
+                //{
+                //    manager.FeatureProviders.Add(new InternalControllerFeatureProvider());
+                //});
 
             return services;
         }

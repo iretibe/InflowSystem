@@ -1,22 +1,3 @@
-namespace InflowSystem.Bootstrapper
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
-
-/*
 using InflowSystem.Modules.Customers.Api;
 using InflowSystem.Shared.Infrastructure;
 using InflowSystem.Shared.Infrastructure.Commands;
@@ -24,18 +5,19 @@ using InflowSystem.Shared.Infrastructure.Commands;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
+
 builder.Services.AddCustomersModule();
 builder.Services.AddModularInfrastructure();
 builder.Services.AddCommands();
+
 //Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+//Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -43,11 +25,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCustomersModule();
-//app.UseModularInfrastructure();
-//app.UseModularInfrastructure();
+
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
-*/

@@ -1,6 +1,7 @@
 ﻿using InflowSystem.Modules.Customers.Core.Commands;
-using InflowSystem.Shared.Abstractions.Commands;
-using Microsoft.AspNetCore.Http;
+using InflowSystem.Modules.Customers.Core.DTO;
+using InflowSystem.Shared.Abstractions.Dispatchers;
+using InflowSystem.Shared.Abstractions.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InflowSystem.Bootstrapper.Controllers
@@ -9,19 +10,41 @@ namespace InflowSystem.Bootstrapper.Controllers
     [Route("[controller]")]
     public class CustomersController : ControllerBase
     {
-        private readonly ICommandDispatcher _commandDispatcher;
+        private readonly IDispatcher _dispatcher;
 
-        public CustomersController(ICommandDispatcher commandDispatcher)
+        public CustomersController(IDispatcher dispatcher)
         {
-            _commandDispatcher = commandDispatcher;
+            _dispatcher = dispatcher;
+        }
+
+        [HttpGet("GetCustomer")]
+        public async Task<IActionResult> GetCustomers(Guid customerId)
+        {
+            var result = await _dispatcher.QueryAsync(new GetCustomer
+            {
+                customerId = customerId
+            });
+
+            if (result is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(result);
         }
 
         [HttpPost("PostCustomer")]
         public async Task<IActionResult> PostCustomer(CreateCustomer command)
         {
-            await _commandDispatcher.SendAsync(command);
+            //await _commandDispatcher.SendAsync(command);
+            await _dispatcher.SendAsync(command);
 
             return Ok(command);
         }
+    }
+
+    internal class GetCustomer : IQuery<object>
+    {
+        public Guid customerId { get; set; }
     }
 }
