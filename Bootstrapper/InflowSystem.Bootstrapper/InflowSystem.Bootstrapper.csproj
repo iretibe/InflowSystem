@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Modules\Customers\InflowSystem.Modules.Customers.Api\InflowSystem.Modules.Customers.Api.csproj" />
+    <ProjectReference Include="..\..\Modules\Users\InflowSystem.Modules.Users.Api\InflowSystem.Modules.Users.Api.csproj" />
   </ItemGroup>
 
 </Project>

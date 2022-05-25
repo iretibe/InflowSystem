@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "OzFp1siNMoLi9vtxi9GUhrOfvyspNDi58sbToyo54LC8mfvd603fljAVCVpFsrUT8O3FG+1LuoD7KkP+1Vf/4A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Users\\InflowSystem.Modules.Users.Api\\InflowSystem.Modules.Users.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\Somad\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

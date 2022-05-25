@@ -3,3 +3,5 @@
 2- dotnet ef migrations add CustomersInitial --startup-project ../../../Bootstrapper\InflowSystem.Bootstrapper/ --context CustomersDbContext -o ./DAL/Migrations
 3- dotnet ef database update --startup-project ../../../Bootstrapper\InflowSystem.Bootstrapper/
 
+4- C:\Users\Somad\source\repos\InflowSystem\Modules\Users\InflowSystem.Modules.Users.Core
+5- dotnet ef migrations add UsersInitial --startup-project ../../../Bootstrapper\InflowSystem.Bootstrapper/ --context UsersDbContext -o ./DAL/Migrations

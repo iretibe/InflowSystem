@@ -2276,6 +2276,20 @@
           "bin/placeholder/InflowSystem.Modules.Customers.Core.dll": {}
         }
       },
+      "InflowSystem.Modules.Users.Api/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InflowSystem.Modules.Users.Api.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InflowSystem.Modules.Users.Api.dll": {}
+        }
+      },
       "InflowSystem.Shared.Abstractions/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -7472,6 +7486,11 @@
       "path": "../../Modules/Customers/InflowSystem.Modules.Customers.Core/InflowSystem.Modules.Customers.Core.csproj",
       "msbuildProject": "../../Modules/Customers/InflowSystem.Modules.Customers.Core/InflowSystem.Modules.Customers.Core.csproj"
     },
+    "InflowSystem.Modules.Users.Api/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/Users/InflowSystem.Modules.Users.Api/InflowSystem.Modules.Users.Api.csproj",
+      "msbuildProject": "../../Modules/Users/InflowSystem.Modules.Users.Api/InflowSystem.Modules.Users.Api.csproj"
+    },
     "InflowSystem.Shared.Abstractions/1.0.0": {
       "type": "project",
       "path": "../../Shared/InflowSystem.Shared.Abstractions/InflowSystem.Shared.Abstractions.csproj",
@@ -7486,6 +7505,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "InflowSystem.Modules.Customers.Api >= 1.0.0",
+      "InflowSystem.Modules.Users.Api >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.4",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.14.0",
@@ -7526,6 +7546,9 @@
           "projectReferences": {
             "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Customers\\InflowSystem.Modules.Customers.Api\\InflowSystem.Modules.Customers.Api.csproj": {
               "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Customers\\InflowSystem.Modules.Customers.Api\\InflowSystem.Modules.Customers.Api.csproj"
+            },
+            "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Users\\InflowSystem.Modules.Users.Api\\InflowSystem.Modules.Users.Api.csproj": {
+              "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Users\\InflowSystem.Modules.Users.Api\\InflowSystem.Modules.Users.Api.csproj"
             }
           }
         }

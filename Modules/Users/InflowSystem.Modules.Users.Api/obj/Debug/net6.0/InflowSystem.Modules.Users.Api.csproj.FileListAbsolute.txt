@@ -1,0 +1,5 @@
+C:\Users\Somad\source\repos\InflowSystem\Modules\Users\InflowSystem.Modules.Users.Api\obj\Debug\net6.0\InflowSystem.Modules.Users.Api.csproj.AssemblyReference.cache
+C:\Users\Somad\source\repos\InflowSystem\Modules\Users\InflowSystem.Modules.Users.Api\obj\Debug\net6.0\InflowSystem.Modules.Users.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Somad\source\repos\InflowSystem\Modules\Users\InflowSystem.Modules.Users.Api\obj\Debug\net6.0\InflowSystem.Modules.Users.Api.AssemblyInfoInputs.cache
+C:\Users\Somad\source\repos\InflowSystem\Modules\Users\InflowSystem.Modules.Users.Api\obj\Debug\net6.0\InflowSystem.Modules.Users.Api.AssemblyInfo.cs
+C:\Users\Somad\source\repos\InflowSystem\Modules\Users\InflowSystem.Modules.Users.Api\obj\Debug\net6.0\InflowSystem.Modules.Users.Api.csproj.CoreCompileInputs.cache
