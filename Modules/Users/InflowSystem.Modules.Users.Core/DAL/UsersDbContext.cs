@@ -5,8 +5,8 @@ namespace InflowSystem.Modules.Users.Core.DAL
 {
     internal class UsersDbContext : DbContext
     {
-        //public DbSet<InboxMessage> Inbox { get; set; }
-        //public DbSet<OutboxMessage> Outbox { get; set; }
+        public DbSet<InboxMessage> Inbox { get; set; }
+        public DbSet<OutboxMessage> Outbox { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
 

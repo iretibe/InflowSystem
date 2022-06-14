@@ -20,11 +20,6 @@ namespace InflowSystem.Shared.Infrastructure.Api
                 return false;
             }
 
-            //if (!typeInfo.IsPublic)
-            //{
-            //    return false;
-            //}
-
             if (typeInfo.ContainsGenericParameters)
             {
                 return false;

@@ -266,7 +266,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Users\\InflowSystem.Modules.Users.Core\\InflowSystem.Modules.Users.Core.csproj": {
+                "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Users\\InflowSystem.Modules.Users.Core\\InflowSystem.Modules.Users.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -284,6 +288,81 @@
               "version": "[2.2.0, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Users\\InflowSystem.Modules.Users.Core\\InflowSystem.Modules.Users.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Users\\InflowSystem.Modules.Users.Core\\InflowSystem.Modules.Users.Core.csproj",
+        "projectName": "InflowSystem.Modules.Users.Core",
+        "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Users\\InflowSystem.Modules.Users.Core\\InflowSystem.Modules.Users.Core.csproj",
+        "packagesPath": "C:\\Users\\Somad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Modules\\Users\\InflowSystem.Modules.Users.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Somad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Abstractions\\InflowSystem.Shared.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Abstractions\\InflowSystem.Shared.Abstractions.csproj"
+              },
+              "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Infrastructure\\InflowSystem.Shared.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Somad\\source\\repos\\InflowSystem\\Shared\\InflowSystem.Shared.Infrastructure\\InflowSystem.Shared.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[6.0.0, )"
             }
@@ -346,6 +425,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -409,6 +498,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
               "version": "[2.2.5, )"
@@ -438,6 +531,10 @@
               "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[6.0.0, )"
             },

@@ -28,7 +28,7 @@ namespace InflowSystem.Modules.Users.Core
                 .AddScoped<IUserRepository, UserRepository>()
                 .AddSingleton<IPasswordHasher<User>, PasswordHasher<User>>()
                 .AddSqlServer<UsersDbContext>()
-                //.AddOutbox<UsersDbContext>()
+                .AddOutbox<UsersDbContext>()
                 .AddUnitOfWork<UsersUnitOfWork>()
                 .AddInitializer<UsersInitializer>();
         }
