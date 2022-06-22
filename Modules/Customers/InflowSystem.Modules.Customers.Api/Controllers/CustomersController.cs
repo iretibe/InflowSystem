@@ -1,10 +1,9 @@
 ﻿using InflowSystem.Modules.Customers.Core.Commands;
-using InflowSystem.Modules.Customers.Core.DTO;
 using InflowSystem.Shared.Abstractions.Dispatchers;
 using InflowSystem.Shared.Abstractions.Queries;
 using Microsoft.AspNetCore.Mvc;
 
-namespace InflowSystem.Bootstrapper.Controllers
+namespace InflowSystem.Modules.Customers.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

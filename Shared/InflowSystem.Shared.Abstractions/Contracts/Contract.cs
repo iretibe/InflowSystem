@@ -7,11 +7,17 @@ namespace InflowSystem.Shared.Abstractions.Contracts
     {
         private readonly ISet<string> _required = new HashSet<string>();
         public Type Type { get; } = typeof(T);
+        public string Module { get; }
         public IEnumerable<string> Required => _required;
 
         protected void Require(Expression<Func<T, object>> expression) => _required.Add(GetName(expression));
 
         protected void Ignore(Expression<Func<T, object>> expression) => _required.Remove(GetName(expression));
+
+        public Contract(string module)
+        {
+            Module = module;
+        }
 
         protected string GetName(Expression<Func<T, object>> expression)
         {

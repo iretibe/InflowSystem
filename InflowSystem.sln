@@ -30,9 +30,14 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{893D38B8-E8DF-44F5-A1A7-FF3C576EFCDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InflowSystem.Modules.Users.Api", "Modules\Users\InflowSystem.Modules.Users.Api\InflowSystem.Modules.Users.Api.csproj", "{21025E05-8EA3-4BF4-93BA-A75D19D37C1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InflowSystem.Modules.Users.Api", "Modules\Users\InflowSystem.Modules.Users.Api\InflowSystem.Modules.Users.Api.csproj", "{21025E05-8EA3-4BF4-93BA-A75D19D37C1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InflowSystem.Modules.Users.Core", "Modules\Users\InflowSystem.Modules.Users.Core\InflowSystem.Modules.Users.Core.csproj", "{13CB1C1C-91FC-4D26-B2FD-E636498A10C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InflowSystem.Modules.Users.Core", "Modules\Users\InflowSystem.Modules.Users.Core\InflowSystem.Modules.Users.Core.csproj", "{13CB1C1C-91FC-4D26-B2FD-E636498A10C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8DE78D62-DB64-486C-83E7-E9534499D283}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

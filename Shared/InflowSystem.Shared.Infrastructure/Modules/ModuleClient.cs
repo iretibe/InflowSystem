@@ -13,15 +13,28 @@ namespace InflowSystem.Shared.Infrastructure.Modules
             _moduleSerializer = moduleSerializer;
         }
 
-        public Task PublishAsync(object message, CancellationToken cancellationToken = default)
+        public async Task PublishAsync(object message, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            var key = message.GetType().Name;
+
+            var registrations = _moduleRegistry
+                .GetBroadcastRegistrations(key)
+                .Where(r => r.ReceiverType != message.GetType());
+
+            var tasks = new List<Task>();
+
+            foreach (var registration in registrations)
+            {
+                var receiverMessage = TranslateType(message, registration.ReceiverType);
+
+                tasks.Add(registration.Action(receiverMessage, cancellationToken));
+            }
+
+            await Task.WhenAll(tasks);
         }
 
         public Task SendAsync(string path, object request, CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
+            => SendAsync<object>(path, request, cancellationToken);
 
         public async Task<TResult> SendAsync<TResult>(string path, object request, CancellationToken cancellationToken = default) where TResult : class
         {

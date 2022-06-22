@@ -1,7 +1,9 @@
-﻿namespace InflowSystem.Shared.Abstractions.Commands
+﻿using InflowSystem.Shared.Abstractions.Messaging;
+
+namespace InflowSystem.Shared.Abstractions.Commands
 {
     //Marker
-    public interface ICommand
+    public interface ICommand : IMessage
     {
     }
 }
