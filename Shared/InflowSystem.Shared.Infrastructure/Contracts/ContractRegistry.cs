@@ -95,7 +95,7 @@ namespace InflowSystem.Shared.Infrastructure.Contracts
             }
         }
 
-        private void ValidateContract(Type requestType, string path)
+        private void ValidateContract(Type contractType, string path)
         {
             var contract = Activator.CreateInstance(contractType) as IContract;
             if (contract is null)
@@ -187,8 +187,8 @@ namespace InflowSystem.Shared.Infrastructure.Contracts
             }
         }
 
-        private void ValidateProperty(object localProperty, object originalProperty, 
-            string propertyName, string contractName, object module, string contractModule, string path)
+        private void ValidateProperty(PropertyInfo localProperty, PropertyInfo originalProperty, 
+            string propertyName, string contractName, string module, string localModule, string path)
         {
             if (localProperty.PropertyType == typeof(string) && originalProperty.PropertyType == typeof(string))
             {
