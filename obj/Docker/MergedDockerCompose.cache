@@ -1,4 +1,3 @@
-name: dockercompose10111193774335795178
 services:
   inflowsystem.bootstrapper:
     build:
@@ -7,34 +6,21 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     image: inflowsystembootstrapper
-    networks:
-      default: null
     ports:
-    - mode: ingress
-      target: 80
-      protocol: tcp
+    - target: 80
   postgres:
     container_name: postgres
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
     image: postgres
-    networks:
-      default: null
     ports:
-    - mode: ingress
+    - published: 5432
       target: 5432
-      published: "5432"
-      protocol: tcp
     restart: unless-stopped
-    shm_size: "4294967296"
+    shm_size: 4gb
     volumes:
-    - type: volume
-      source: postgres
-      target: /var/lib/postgresql/data
-      volume: {}
-networks:
-  default:
-    name: dockercompose10111193774335795178_default
+    - postgres:/var/lib/postgresql/data:rw
+version: '3.4'
 volumes:
-  postgres:
-    name: dockercompose10111193774335795178_postgres
+  driver: {}
+  postgres: {}

@@ -1,4 +1,5 @@
 ﻿using InflowSystem.Modules.Customers.Core.Commands;
+using InflowSystem.Modules.Customers.Core.DTO;
 using InflowSystem.Shared.Abstractions.Dispatchers;
 using InflowSystem.Shared.Abstractions.Queries;
 using Microsoft.AspNetCore.Mvc;
@@ -42,7 +43,7 @@ namespace InflowSystem.Modules.Customers.Api.Controllers
         }
     }
 
-    internal class GetCustomer : IQuery<object>
+    internal class GetCustomer : IQuery<CustomerDetailDto>
     {
         public Guid customerId { get; set; }
     }

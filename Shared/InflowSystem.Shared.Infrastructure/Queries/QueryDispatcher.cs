@@ -12,7 +12,7 @@ namespace InflowSystem.Shared.Infrastructure.Queries
             _serviceProvider = serviceProvider;
         }
 
-        public async Task<TResult> QueryAsync<TResult>(IQuery<TResult> query, CancellationToken cancellationToken = default) where TResult : class
+        public async Task<TResult> QueryAsync<TResult>(IQuery<TResult> query, CancellationToken cancellationToken = default)
         {
             using var scope = _serviceProvider.CreateScope();
             var handlerType = typeof(IQueryHandler<,>).MakeGenericType(query.GetType(), typeof(TResult));

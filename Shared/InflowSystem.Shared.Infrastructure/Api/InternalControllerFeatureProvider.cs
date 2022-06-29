@@ -4,10 +4,8 @@ using System.Reflection;
 
 namespace InflowSystem.Shared.Infrastructure.Api
 {
-    internal class InternalControllerFeatureProvider : ControllerFeatureProvider
+    internal sealed class InternalControllerFeatureProvider : ControllerFeatureProvider
     {
-        private const string ControllerTypeNameSuffix = "Controller";
-
         protected override bool IsController(TypeInfo typeInfo)
         {
             if (!typeInfo.IsClass)
@@ -30,7 +28,8 @@ namespace InflowSystem.Shared.Infrastructure.Api
                 return false;
             }
 
-            if (!typeInfo.Name.EndsWith("Controller", StringComparison.OrdinalIgnoreCase) && !typeInfo.IsDefined(typeof(ControllerAttribute)))
+            if (!typeInfo.Name.EndsWith("Controller", StringComparison.OrdinalIgnoreCase) &&
+                !typeInfo.IsDefined(typeof(ControllerAttribute)))
             {
                 return false;
             }

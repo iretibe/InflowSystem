@@ -1,14 +1,18 @@
 ﻿using InflowSystem.Shared.Abstractions.Dispatchers;
 using InflowSystem.Shared.Abstractions.Modules;
+using InflowSystem.Shared.Abstractions.Storage;
 using InflowSystem.Shared.Abstractions.Time;
 using InflowSystem.Shared.Infrastructure.Api;
 using InflowSystem.Shared.Infrastructure.Auth;
 using InflowSystem.Shared.Infrastructure.Commands;
 using InflowSystem.Shared.Infrastructure.Dispatchers;
 using InflowSystem.Shared.Infrastructure.Events;
+using InflowSystem.Shared.Infrastructure.Exceptions;
 using InflowSystem.Shared.Infrastructure.Modules;
 using InflowSystem.Shared.Infrastructure.Queries;
+using InflowSystem.Shared.Infrastructure.Serialization;
 using InflowSystem.Shared.Infrastructure.SQLServer;
+using InflowSystem.Shared.Infrastructure.Storage;
 using InflowSystem.Shared.Infrastructure.Time;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -51,16 +55,23 @@ namespace InflowSystem.Shared.Infrastructure
             }
 
             services
+                .AddHttpClient()
+                .AddSingleton<IRequestStorage, RequestStorage>()
+                .AddSingleton<IHttpContextAccessor, HttpContextAccessor>()
+                .AddSingleton<IJsonSerializer, SystemTextJsonSerializer>()
+                //.AddContext()
                 .AddAuth(modules)
                 .AddCommands(assemblies)
                 .AddEvents(assemblies)
                 .AddQueries(assemblies)
                 .AddSingleton<IDispatcher, InMemoryDispatcher>()
-                //.AddPostgres()
+                 //.AddPostgres()
                 .AddSqlServer()
                 .AddSingleton<IClock, UtcClock>()
                 .AddMemoryCache()
+                .AddModuleInfo(modules)
                 .AddModuleRequests(assemblies)
+                .AddErrorHandling()
                 .AddControllers()
                 .ConfigureApplicationPartManager(manager =>
                 {

@@ -1,8 +1,10 @@
 ﻿using InflowSystem.Modules.Customers.Api.Controllers;
 using InflowSystem.Modules.Customers.Core;
 using InflowSystem.Modules.Customers.Core.DTO;
+using InflowSystem.Modules.Customers.Core.Events.External;
 using InflowSystem.Shared.Abstractions.Modules;
 using InflowSystem.Shared.Abstractions.Queries;
+using InflowSystem.Shared.Infrastructure.Contracts;
 using InflowSystem.Shared.Infrastructure.Modules;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
