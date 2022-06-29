@@ -1,6 +1,6 @@
 ﻿namespace InflowSystem.Shared.Infrastructure.Serialization
 {
-    internal interface IJsonSerializer
+    public interface IJsonSerializer
     {
         string Serialize<T>(T value);
         T Deserialize<T>(string value);

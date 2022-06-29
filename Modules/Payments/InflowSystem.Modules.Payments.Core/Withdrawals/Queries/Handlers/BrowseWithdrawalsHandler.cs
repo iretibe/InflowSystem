@@ -1,55 +1,55 @@
 ﻿using InflowSystem.Modules.Payments.Core.DAL;
-using InflowSystem.Modules.Payments.Core.Deposits.Domain.Entities;
-using InflowSystem.Modules.Payments.Core.Deposits.DTO;
+using InflowSystem.Modules.Payments.Core.Withdrawals.Domain.Entities;
+using InflowSystem.Modules.Payments.Core.Withdrawals.DTO;
 using InflowSystem.Shared.Abstractions.Kernel.ValueObjects;
 using InflowSystem.Shared.Abstractions.Queries;
 using InflowSystem.Shared.Infrastructure.SQLServer;
 using Microsoft.EntityFrameworkCore;
 
-namespace InflowSystem.Modules.Payments.Core.Deposits.Queries.Handlers
+namespace InflowSystem.Modules.Payments.Core.Withdrawals.Queries.Handlers
 {
-    internal class BrowseDepositsHandler : IQueryHandler<BrowseDeposits, Paged<DepositDto>>
+    internal sealed class BrowseWithdrawalsHandler : IQueryHandler<BrowseWithdrawals, Paged<WithdrawalDto>>
     {
         private readonly PaymentsDbContext _dbContext;
 
-        public BrowseDepositsHandler(PaymentsDbContext dbContext)
+        public BrowseWithdrawalsHandler(PaymentsDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public Task<Paged<DepositDto>> HandleAsync(BrowseDeposits query, CancellationToken cancellationToken = default)
+        public Task<Paged<WithdrawalDto>> HandleAsync(BrowseWithdrawals query, CancellationToken cancellationToken = default)
         {
-            var deposits = _dbContext.Deposits.AsQueryable();
+            var withdrawals = _dbContext.Withdrawals.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(query.Currency))
             {
                 _ = new Currency(query.Currency);
-                deposits = deposits.Where(x => x.Currency == query.Currency);
+                withdrawals = withdrawals.Where(x => x.Currency == query.Currency);
             }
 
             if (!string.IsNullOrWhiteSpace(query.Status) &&
-                Enum.TryParse<DepositStatus>(query.Status, true, out var status))
+                Enum.TryParse<WithdrawalStatus>(query.Status, true, out var status))
             {
-                deposits = deposits.Where(x => x.Status == status);
+                withdrawals = withdrawals.Where(x => x.Status == status);
             }
 
             if (query.AccountId.HasValue)
             {
-                deposits = deposits.Where(x => x.AccountId == query.AccountId &&
-                                               (!query.CustomerId.HasValue || x.Account.CustomerId == query.CustomerId));
+                withdrawals = withdrawals.Where(x => x.AccountId == query.AccountId &&
+                                                     (!query.CustomerId.HasValue || x.Account.CustomerId == query.CustomerId));
             }
 
             if (query.CustomerId.HasValue)
             {
-                deposits = deposits.Where(x => x.Account.CustomerId == query.CustomerId);
+                withdrawals = withdrawals.Where(x => x.Account.CustomerId == query.CustomerId);
             }
 
-            return deposits.AsNoTracking()
+            return withdrawals.AsNoTracking()
                 .Include(x => x.Account)
                 .OrderByDescending(x => x.CreatedAt)
-                .Select(x => new DepositDto
+                .Select(x => new WithdrawalDto
                 {
-                    DepositId = x.Id,
+                    WithdrawalId = x.Id,
                     AccountId = x.AccountId,
                     CustomerId = x.Account.CustomerId,
                     Amount = x.Amount,

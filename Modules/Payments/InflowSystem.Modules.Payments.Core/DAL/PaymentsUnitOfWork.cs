@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using InflowSystem.Shared.Infrastructure.SQLServer;
 
 namespace InflowSystem.Modules.Payments.Core.DAL
 {
-    internal class PaymentsUnitOfWork
+    internal class PaymentsUnitOfWork : SQLServerUnitOfWork<PaymentsDbContext>
     {
+        public PaymentsUnitOfWork(PaymentsDbContext dbContext) : base(dbContext)
+        {
+        }
     }
 }

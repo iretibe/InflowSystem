@@ -1,25 +1,25 @@
 ﻿using InflowSystem.Modules.Payments.Core.DAL;
-using InflowSystem.Modules.Payments.Core.Deposits.DTO;
+using InflowSystem.Modules.Payments.Core.Withdrawals.DTO;
 using InflowSystem.Shared.Abstractions.Kernel.ValueObjects;
 using InflowSystem.Shared.Abstractions.Queries;
 using InflowSystem.Shared.Infrastructure.SQLServer;
 using Microsoft.EntityFrameworkCore;
 
-namespace InflowSystem.Modules.Payments.Core.Deposits.Queries.Handlers
+namespace InflowSystem.Modules.Payments.Core.Withdrawals.Queries.Handlers
 {
-    internal class BrowseDepositAccountsHandler : IQueryHandler<BrowseDepositAccounts, Paged<DepositAccountDto>>
+    internal sealed class BrowseWithdrawalAccountsHandler : IQueryHandler<BrowseWithdrawalAccounts, Paged<WithdrawalAccountDto>>
     {
         private readonly PaymentsDbContext _dbContext;
 
-        public BrowseDepositAccountsHandler(PaymentsDbContext dbContext)
+        public BrowseWithdrawalAccountsHandler(PaymentsDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public Task<Paged<DepositAccountDto>> HandleAsync(BrowseDepositAccounts query,
+        public Task<Paged<WithdrawalAccountDto>> HandleAsync(BrowseWithdrawalAccounts query,
             CancellationToken cancellationToken = default)
         {
-            var accounts = _dbContext.DepositAccounts.AsQueryable();
+            var accounts = _dbContext.WithdrawalAccounts.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(query.Currency))
             {
@@ -34,7 +34,7 @@ namespace InflowSystem.Modules.Payments.Core.Deposits.Queries.Handlers
 
             return accounts.AsNoTracking()
                 .OrderByDescending(x => x.CreatedAt)
-                .Select(x => new DepositAccountDto
+                .Select(x => new WithdrawalAccountDto
                 {
                     AccountId = x.Id,
                     CustomerId = x.CustomerId,

@@ -16,16 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DAL\Configurations\" />
-    <Folder Include="DAL\Repositories\" />
-    <Folder Include="Withdrawals\Commands\" />
-    <Folder Include="Withdrawals\DTO\" />
-    <Folder Include="Withdrawals\Events\" />
-    <Folder Include="Withdrawals\Services\" />
-    <Folder Include="Withdrawals\Queries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\InflowSystem.Shared.Abstractions\InflowSystem.Shared.Abstractions.csproj" />
     <ProjectReference Include="..\..\..\Shared\InflowSystem.Shared.Infrastructure\InflowSystem.Shared.Infrastructure.csproj" />
     <ProjectReference Include="..\InflowSystem.Modules.Payments.Shared\InflowSystem.Modules.Payments.Shared.csproj" />
