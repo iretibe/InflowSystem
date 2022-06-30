@@ -1,0 +1,5 @@
+C:\Users\Somad\source\repos\InflowSystem\Modules\Wallets\InflowSystem.Modules.Wallets.Application\obj\Debug\net6.0\InflowSystem.Modules.Wallets.Application.csproj.AssemblyReference.cache
+C:\Users\Somad\source\repos\InflowSystem\Modules\Wallets\InflowSystem.Modules.Wallets.Application\obj\Debug\net6.0\InflowSystem.Modules.Wallets.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Somad\source\repos\InflowSystem\Modules\Wallets\InflowSystem.Modules.Wallets.Application\obj\Debug\net6.0\InflowSystem.Modules.Wallets.Application.AssemblyInfoInputs.cache
+C:\Users\Somad\source\repos\InflowSystem\Modules\Wallets\InflowSystem.Modules.Wallets.Application\obj\Debug\net6.0\InflowSystem.Modules.Wallets.Application.AssemblyInfo.cs
+C:\Users\Somad\source\repos\InflowSystem\Modules\Wallets\InflowSystem.Modules.Wallets.Application\obj\Debug\net6.0\InflowSystem.Modules.Wallets.Application.csproj.CoreCompileInputs.cache
