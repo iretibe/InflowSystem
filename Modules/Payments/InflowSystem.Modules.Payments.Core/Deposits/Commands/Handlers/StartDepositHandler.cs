@@ -1,4 +1,5 @@
 ﻿using InflowSystem.Modules.Payments.Core.Deposits.Domain.Repositories;
+using InflowSystem.Modules.Payments.Core.Deposits.Events;
 using InflowSystem.Modules.Payments.Core.Deposits.Exceptions;
 using InflowSystem.Modules.Payments.Shared.Exceptions;
 using InflowSystem.Modules.Payments.Shared.Repositories;

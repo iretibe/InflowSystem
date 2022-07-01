@@ -1,8 +1,11 @@
-﻿using InflowSystem.Modules.Wallets.Core.Owners.Repositories;
+﻿using InflowSystem.Modules.Wallets.Application.Wallets.Storage;
+using InflowSystem.Modules.Wallets.Core.Owners.Repositories;
 using InflowSystem.Modules.Wallets.Core.Wallets.Repositories;
 using InflowSystem.Modules.Wallets.Infrastructure.EF;
 using InflowSystem.Modules.Wallets.Infrastructure.EF.Repositories;
 using InflowSystem.Modules.Wallets.Infrastructure.Storage;
+using InflowSystem.Shared.Infrastructure.Messaging.Outbox;
+using InflowSystem.Shared.Infrastructure.SQLServer;
 using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.CompilerServices;
 
@@ -24,7 +27,7 @@ namespace InflowSystem.Modules.Wallets.Infrastructure
                 .AddScoped<ICorporateOwnerRepository, CorporateOwnerRepository>()
                 .AddScoped<IIndividualOwnerRepository, IndividualOwnerRepository>()
                 .AddScoped<IWalletRepository, WalletRepository>()
-                .AddPostgres<WalletsDbContext>()
+                .AddSqlServer<WalletsDbContext>()
                 .AddOutbox<WalletsDbContext>()
                 .AddUnitOfWork<WalletsUnitOfWork>();
         }

@@ -1,4 +1,5 @@
 ﻿using InflowSystem.Modules.Users.Core.Entities;
+using InflowSystem.Shared.Infrastructure.Messaging.Outbox;
 using Microsoft.EntityFrameworkCore;
 
 namespace InflowSystem.Modules.Users.Core.DAL

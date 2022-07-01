@@ -5,17 +5,25 @@ using InflowSystem.Shared.Abstractions.Time;
 using InflowSystem.Shared.Infrastructure.Api;
 using InflowSystem.Shared.Infrastructure.Auth;
 using InflowSystem.Shared.Infrastructure.Commands;
+using InflowSystem.Shared.Infrastructure.Contexts;
+using InflowSystem.Shared.Infrastructure.Contracts;
 using InflowSystem.Shared.Infrastructure.Dispatchers;
 using InflowSystem.Shared.Infrastructure.Events;
 using InflowSystem.Shared.Infrastructure.Exceptions;
+using InflowSystem.Shared.Infrastructure.Kernel;
+using InflowSystem.Shared.Infrastructure.Logging;
+using InflowSystem.Shared.Infrastructure.Messaging;
+using InflowSystem.Shared.Infrastructure.Messaging.Outbox;
 using InflowSystem.Shared.Infrastructure.Modules;
 using InflowSystem.Shared.Infrastructure.Queries;
+using InflowSystem.Shared.Infrastructure.Security;
 using InflowSystem.Shared.Infrastructure.Serialization;
 using InflowSystem.Shared.Infrastructure.SQLServer;
 using InflowSystem.Shared.Infrastructure.Storage;
 using InflowSystem.Shared.Infrastructure.Time;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -55,23 +63,47 @@ namespace InflowSystem.Shared.Infrastructure
             }
 
             services
+                .AddCorsPolicy()
+                //.AddSwaggerGen(swagger =>
+                //{
+                //    swagger.EnableAnnotations();
+                //    swagger.CustomSchemaIds(x => x.FullName);
+                //    swagger.SwaggerDoc("v1", new OpenApiInfo
+                //    {
+                //        Title = "Modular API",
+                //        Version = "v1"
+                //    });
+                //})
+                ;
+
+            var appOptions = services.GetOptions<AppOptions>("app");
+            services.AddSingleton(appOptions);
+
+            services
+                .AddMemoryCache()
                 .AddHttpClient()
                 .AddSingleton<IRequestStorage, RequestStorage>()
                 .AddSingleton<IHttpContextAccessor, HttpContextAccessor>()
                 .AddSingleton<IJsonSerializer, SystemTextJsonSerializer>()
-                //.AddContext()
-                .AddAuth(modules)
-                .AddCommands(assemblies)
-                .AddEvents(assemblies)
-                .AddQueries(assemblies)
-                .AddSingleton<IDispatcher, InMemoryDispatcher>()
-                 //.AddPostgres()
-                .AddSqlServer()
-                .AddSingleton<IClock, UtcClock>()
-                .AddMemoryCache()
                 .AddModuleInfo(modules)
                 .AddModuleRequests(assemblies)
+                .AddAuth(modules)
                 .AddErrorHandling()
+                .AddContext()
+                .AddCommands(assemblies)
+                .AddQueries(assemblies)
+                .AddEvents(assemblies)
+                .AddDomainEvents(assemblies)
+                .AddMessaging()
+                .AddSecurity()
+                .AddSingleton<IClock, UtcClock>()
+                .AddSingleton<IDispatcher, InMemoryDispatcher>()
+                .AddLoggingDecorators()
+                //.AddPostgres()
+                .AddSqlServer()
+                .AddOutbox()
+                .AddHostedService<DbContextAppInitializer>()
+                .AddContracts()
                 .AddControllers()
                 .ConfigureApplicationPartManager(manager =>
                 {
@@ -92,6 +124,32 @@ namespace InflowSystem.Shared.Infrastructure
                 });
 
             return services;
+        }
+
+        public static IApplicationBuilder UseModularInfrastructure(this IApplicationBuilder app)
+        {
+            app
+                .UseForwardedHeaders(new ForwardedHeadersOptions
+                {
+                    ForwardedHeaders = ForwardedHeaders.All
+                })
+                .UseCors("cors")
+                .UseCorrelationId()
+                .UseErrorHandling()
+                .UseSwagger()
+                .UseReDoc(reDoc =>
+                {
+                    reDoc.RoutePrefix = "docs";
+                    reDoc.SpecUrl("/swagger/v1/swagger.json");
+                    reDoc.DocumentTitle = "Modular API";
+                })
+                .UseAuth()
+                .UseContext()
+                .UseLogging()
+                .UseRouting()
+                .UseAuthorization();
+
+            return app;
         }
 
         public static T GetOptions<T>(this IServiceCollection services, string sectionName) where T : class, new()

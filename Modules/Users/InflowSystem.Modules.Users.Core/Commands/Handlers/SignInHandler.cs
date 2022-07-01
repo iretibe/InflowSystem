@@ -1,7 +1,9 @@
 ﻿using InflowSystem.Modules.Users.Core.Entities;
+using InflowSystem.Modules.Users.Core.Events;
 using InflowSystem.Modules.Users.Core.Exceptions;
 using InflowSystem.Modules.Users.Core.Repositories;
 using InflowSystem.Modules.Users.Core.Services;
+using InflowSystem.Shared.Abstractions;
 using InflowSystem.Shared.Abstractions.Auth;
 using InflowSystem.Shared.Abstractions.Commands;
 using InflowSystem.Shared.Abstractions.Messaging;
@@ -53,9 +55,13 @@ namespace InflowSystem.Modules.Users.Core.Commands.Handlers
             };
 
             var jwt = _authManager.CreateToken(user.Id, user.Role.Name, claims: claims);
+
             jwt.Email = user.Email;
+
             await _messageBroker.PublishAsync(new SignedIn(user.Id), cancellationToken);
+
             _logger.LogInformation($"User with ID: '{user.Id}' has signed in.");
+
             _userRequestStorage.SetToken(command.Id, jwt);
         }
     }

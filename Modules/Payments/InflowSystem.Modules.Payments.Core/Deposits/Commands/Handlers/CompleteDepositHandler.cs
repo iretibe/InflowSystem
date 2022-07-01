@@ -1,6 +1,9 @@
-﻿using InflowSystem.Modules.Payments.Core.Deposits.Domain.Repositories;
+﻿using InflowSystem.Modules.Payments.Core.Deposits.Domain.Entities;
+using InflowSystem.Modules.Payments.Core.Deposits.Domain.Repositories;
+using InflowSystem.Modules.Payments.Core.Deposits.Events;
 using InflowSystem.Modules.Payments.Core.Deposits.Exceptions;
 using InflowSystem.Shared.Abstractions.Commands;
+using InflowSystem.Shared.Abstractions.Events;
 using InflowSystem.Shared.Abstractions.Messaging;
 using InflowSystem.Shared.Abstractions.Time;
 using Microsoft.Extensions.Logging;

@@ -9,7 +9,7 @@ namespace InflowSystem.Modules.Customers.Core.Events.External
     [Message("users")]
     internal class SignedUpContract : Contract<SignedUp>
     {
-        public SignedUpContract(string module) : base(module)
+        public SignedUpContract(string module)
         {
             RequireAll();
         }

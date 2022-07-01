@@ -1,3 +1,9 @@
+using InflowSystem.Shared.Abstractions.Modules;
+using InflowSystem.Shared.Infrastructure;
+using InflowSystem.Shared.Infrastructure.Contracts;
+using InflowSystem.Shared.Infrastructure.Modules;
+using System.Reflection;
+
 namespace InflowSystem.Bootstrapper
 {
     public class Startup
@@ -14,6 +20,7 @@ namespace InflowSystem.Bootstrapper
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddModularInfrastructure(_assemblies, _modules);
+            
             foreach (var module in _modules)
             {
                 module.Register(services);
@@ -23,13 +30,16 @@ namespace InflowSystem.Bootstrapper
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
             logger.LogInformation($"Modules: {string.Join(", ", _modules.Select(x => x.Name))}");
+            
             app.UseModularInfrastructure();
+            
             foreach (var module in _modules)
             {
                 module.Use(app);
             }
 
             app.ValidateContracts(_assemblies);
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

@@ -21,7 +21,7 @@ namespace InflowSystem.Modules.Customers.Core.DAL.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public Task<bool> ExistenceAsync(string name)
+        public Task<bool> ExistsAsync(string name)
             => _customers.AnyAsync(x => x.Name == name);
 
         public Task<Customer> GetAsync(Guid id)

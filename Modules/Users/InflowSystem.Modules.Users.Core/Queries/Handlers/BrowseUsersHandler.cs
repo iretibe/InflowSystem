@@ -2,6 +2,7 @@
 using InflowSystem.Modules.Users.Core.DTO;
 using InflowSystem.Modules.Users.Core.Entities;
 using InflowSystem.Shared.Abstractions.Queries;
+using InflowSystem.Shared.Infrastructure.SQLServer;
 using Microsoft.EntityFrameworkCore;
 
 namespace InflowSystem.Modules.Users.Core.Queries.Handlers

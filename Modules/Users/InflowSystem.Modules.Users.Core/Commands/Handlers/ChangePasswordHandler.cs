@@ -1,6 +1,7 @@
 ﻿using InflowSystem.Modules.Users.Core.Entities;
 using InflowSystem.Modules.Users.Core.Exceptions;
 using InflowSystem.Modules.Users.Core.Repositories;
+using InflowSystem.Shared.Abstractions;
 using InflowSystem.Shared.Abstractions.Commands;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;

@@ -1,4 +1,5 @@
-﻿using InflowSystem.Modules.Wallets.Core.Wallets.Entities;
+﻿using InflowSystem.Modules.Wallets.Application.Wallets.Storage;
+using InflowSystem.Modules.Wallets.Core.Wallets.Entities;
 using InflowSystem.Modules.Wallets.Infrastructure.EF;
 using InflowSystem.Shared.Abstractions.Queries;
 using InflowSystem.Shared.Infrastructure.SQLServer;

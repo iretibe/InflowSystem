@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Http;
@@ -12,6 +13,7 @@ namespace InflowSystem.Shared.Infrastructure.Auth
         {
             var authenticationTicket = new AuthenticationTicket(new ClaimsPrincipal(),
                 new AuthenticationProperties(), JwtBearerDefaults.AuthenticationScheme);
+
             return Task.FromResult(AuthenticateResult.Success(authenticationTicket));
         }
 

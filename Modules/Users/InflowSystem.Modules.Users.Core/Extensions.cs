@@ -4,6 +4,7 @@ using InflowSystem.Modules.Users.Core.Entities;
 using InflowSystem.Modules.Users.Core.Repositories;
 using InflowSystem.Modules.Users.Core.Services;
 using InflowSystem.Shared.Infrastructure;
+using InflowSystem.Shared.Infrastructure.Messaging.Outbox;
 using InflowSystem.Shared.Infrastructure.SQLServer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;

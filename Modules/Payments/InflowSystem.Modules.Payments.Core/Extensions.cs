@@ -1,4 +1,15 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using InflowSystem.Modules.Payments.Core.DAL;
+using InflowSystem.Modules.Payments.Core.DAL.Repositories;
+using InflowSystem.Modules.Payments.Core.Deposits.Domain.Factories;
+using InflowSystem.Modules.Payments.Core.Deposits.Domain.Repositories;
+using InflowSystem.Modules.Payments.Core.Deposits.Domain.Services;
+using InflowSystem.Modules.Payments.Core.Withdrawals.Domain.Repositories;
+using InflowSystem.Modules.Payments.Core.Withdrawals.Services;
+using InflowSystem.Modules.Payments.Shared.Clients;
+using InflowSystem.Modules.Payments.Shared.Repositories;
+using InflowSystem.Shared.Infrastructure.Messaging.Outbox;
+using InflowSystem.Shared.Infrastructure.SQLServer;
+using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("InflowSystem.Modules.Payments.Api")]
@@ -21,7 +32,7 @@ namespace InflowSystem.Modules.Payments.Core
                 .AddScoped<IWithdrawalAccountRepository, WithdrawalAccountRepository>()
                 .AddSingleton<ICurrencyResolver, CurrencyResolver>()
                 .AddSingleton<IDepositAccountFactory, DepositAccountFactory>()
-                .AddPostgres<PaymentsDbContext>()
+                .AddSqlServer<PaymentsDbContext>()
                 .AddOutbox<PaymentsDbContext>()
                 .AddUnitOfWork<PaymentsUnitOfWork>();
         }
